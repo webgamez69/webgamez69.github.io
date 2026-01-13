@@ -1,4 +1,4 @@
-import { score } from "./init";
+import { score, setScore } from "./init.js";
 
 const click_thing = document.getElementById("click-thing");
 const score_label = document.getElementById("score-label");
@@ -9,6 +9,6 @@ click_thing.addEventListener("click", () => {
 });
 
 function onClick_thingClicked() {
-    score += 1;
+    setScore(score + 1);
     score_label.textContent = `score: ${score}`;
 }
